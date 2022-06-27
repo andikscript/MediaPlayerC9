@@ -39,6 +39,7 @@
             this.labelDuration = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.VideoPlayer = new AxWMPLib.AxWindowsMediaPlayer();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VideoPlayer)).BeginInit();
             this.SuspendLayout();
@@ -79,10 +80,10 @@
             // Playlist
             // 
             this.Playlist.FormattingEnabled = true;
-            this.Playlist.Location = new System.Drawing.Point(710, 28);
+            this.Playlist.Location = new System.Drawing.Point(710, 54);
             this.Playlist.Name = "Playlist";
             this.Playlist.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Playlist.Size = new System.Drawing.Size(179, 433);
+            this.Playlist.Size = new System.Drawing.Size(179, 407);
             this.Playlist.TabIndex = 2;
             this.Playlist.SelectedIndexChanged += new System.EventHandler(this.PlaylistChange);
             // 
@@ -118,11 +119,22 @@
             this.VideoPlayer.TabIndex = 1;
             this.VideoPlayer.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.MediaPlayerStateChangeEvent);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(710, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Playlist : ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 491);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelDuration);
             this.Controls.Add(this.fileName);
             this.Controls.Add(this.Playlist);
@@ -152,6 +164,7 @@
         private System.Windows.Forms.Label fileName;
         private System.Windows.Forms.Label labelDuration;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label label1;
     }
 }
 
